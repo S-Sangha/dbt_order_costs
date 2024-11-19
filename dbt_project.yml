@@ -1,0 +1,46 @@
+# Name of the project (use lowercase and underscores)
+name: 'dbt_order_costs'
+version: '1.0.0'
+
+# Profile to use for this project, ensure it matches the profile defined in profiles.yml
+profile: 'dbt_order_costs'
+
+# Path configurations for where dbt looks for different types of files
+model-paths: ["models"]  # models directory for your SQL models
+analysis-paths: ["analyses"]  # analysis files (optional)
+test-paths: ["tests"]  # test files
+seed-paths: ["seeds"]  # seed files (optional)
+macro-paths: ["macros"]  # macros for reusable logic
+snapshot-paths: ["snapshots"]  # snapshot files (optional)
+
+# Clean targets are directories to be cleaned by dbt clean
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations: Apply different settings for specific directories or models
+
+models:
+  dbt_order_costs:
+    # Define configuration for different directories under models/
+    
+    # For staging models (should be materialized as views for cleaning and transformation)
+    staging:
+      +materialized: view
+    
+    # For the derived models (costs, spend_per_user) use tables for performance
+    metrics:
+      +materialized: table
+
+    # If you want any specific model configurations for individual models:
+    # example model configurations
+    example_model:
+      +materialized: table
+
+    # If you want more fine-grained control over individual models, you can define them like so:
+    costs:
+      +materialized: table
+    spend_per_user:
+      +materialized: table
+
+# You can add additional configurations here based on your needs

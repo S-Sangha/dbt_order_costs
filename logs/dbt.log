@@ -1,0 +1,1447 @@
+[0m18:15:22.009421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105332510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070dfd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070dfed0>]}
+
+
+============================== 18:15:22.013567 | f25b1991-de45-4686-839e-c607a98405bc ==============================
+[0m18:15:22.013567 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:15:22.013986 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sksangha/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/sksangha/dbt_order_costs/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:15:22.164016 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m18:15:22.164372 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m18:15:22.307882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cd7230>]}
+[0m18:15:22.352878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107174d10>]}
+[0m18:15:22.355050 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m18:15:22.397522 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:15:22.398826 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:15:22.399345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dec350>]}
+[0m18:15:23.641857 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_order_costs.costs
+- models.dbt_order_costs.spend_per_user
+- models.dbt_order_costs.example_model
+[0m18:15:23.654514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c834d0>]}
+[0m18:15:23.747669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086c8830>]}
+[0m18:15:23.747999 [info ] [MainThread]: Found 5 models, 3 sources, 489 macros
+[0m18:15:23.750233 [info ] [MainThread]: 
+[0m18:15:23.750787 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m18:15:23.753812 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_etleap'
+[0m18:15:23.782074 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap"
+[0m18:15:23.782604 [debug] [ThreadPool]: On list_dev_etleap: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "list_dev_etleap"} */
+
+    select distinct nspname from pg_namespace
+[0m18:15:23.782766 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:15:23.787700 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:23.788968 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:24.888616 [debug] [ThreadPool]: SQL status: SUCCESS in 1.106 seconds
+[0m18:15:24.893671 [debug] [ThreadPool]: On list_dev_etleap: Close
+[0m18:15:24.896509 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_etleap, now list_dev_etleap_shannon_test)
+[0m18:15:24.907327 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap_shannon_test"
+[0m18:15:24.907838 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: BEGIN
+[0m18:15:24.908188 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:15:24.908780 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:24.909154 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:25.872270 [debug] [ThreadPool]: SQL status: SUCCESS in 0.964 seconds
+[0m18:15:25.873004 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap_shannon_test"
+[0m18:15:25.873453 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "list_dev_etleap_shannon_test"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'shannon_test'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'shannon_test'
+[0m18:15:26.146081 [debug] [ThreadPool]: SQL status: SUCCESS in 0.272 seconds
+[0m18:15:26.148641 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: ROLLBACK
+[0m18:15:26.311722 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: Close
+[0m18:15:26.326688 [debug] [MainThread]: Using redshift connection "master"
+[0m18:15:26.327316 [debug] [MainThread]: On master: BEGIN
+[0m18:15:26.327607 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:15:26.328137 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:26.328534 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:27.248321 [debug] [MainThread]: SQL status: SUCCESS in 0.921 seconds
+[0m18:15:27.248944 [debug] [MainThread]: Using redshift connection "master"
+[0m18:15:27.249425 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m18:15:27.985878 [debug] [MainThread]: SQL status: SUCCESS in 0.736 seconds
+[0m18:15:27.989168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10868b5f0>]}
+[0m18:15:27.989792 [debug] [MainThread]: On master: ROLLBACK
+[0m18:15:28.157349 [debug] [MainThread]: Using redshift connection "master"
+[0m18:15:28.157963 [debug] [MainThread]: On master: BEGIN
+[0m18:15:28.239419 [debug] [MainThread]: SQL status: SUCCESS in 0.081 seconds
+[0m18:15:28.240090 [debug] [MainThread]: On master: COMMIT
+[0m18:15:28.240696 [debug] [MainThread]: Using redshift connection "master"
+[0m18:15:28.240939 [debug] [MainThread]: On master: COMMIT
+[0m18:15:28.406602 [debug] [MainThread]: SQL status: SUCCESS in 0.165 seconds
+[0m18:15:28.407235 [debug] [MainThread]: On master: Close
+[0m18:15:28.408084 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:15:28.408588 [info ] [MainThread]: 
+[0m18:15:28.412892 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_orders
+[0m18:15:28.413639 [info ] [Thread-1 (]: 1 of 5 START sql view model shannon_test.stg_orders ............................ [RUN]
+[0m18:15:28.415848 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_etleap_shannon_test, now model.dbt_order_costs.stg_orders)
+[0m18:15:28.416503 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_orders
+[0m18:15:28.424227 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_orders"
+[0m18:15:28.428139 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_orders
+[0m18:15:28.476327 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_orders"
+[0m18:15:28.480990 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:28.481645 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:15:28.482892 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:15:28.483966 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:28.484824 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:29.406796 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.924 seconds
+[0m18:15:29.407636 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:29.408150 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_orders__dbt_tmp" as (
+    
+
+SELECT
+    id AS order_id,
+    user_id,
+    product_id,
+    quantity
+FROM "dev_etleap"."shannon_test"."orders"
+  ) ;
+[0m18:15:29.814272 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.406 seconds
+[0m18:15:29.824052 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:29.824621 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+alter table "dev_etleap"."shannon_test"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m18:15:30.066092 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.241 seconds
+[0m18:15:30.071096 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:30.071857 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+alter table "dev_etleap"."shannon_test"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m18:15:30.318158 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.246 seconds
+[0m18:15:30.345466 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:15:30.346255 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:30.346768 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:15:31.056271 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.709 seconds
+[0m18:15:31.057235 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:31.057689 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:15:31.220687 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.162 seconds
+[0m18:15:31.229643 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_orders__dbt_backup"
+[0m18:15:31.237110 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:31.237665 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_orders__dbt_backup" cascade
+[0m18:15:31.402635 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.164 seconds
+[0m18:15:31.403839 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:15:31.404373 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:31.404805 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:15:31.856276 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.451 seconds
+[0m18:15:31.857108 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:15:31.857543 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:15:31.937602 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.079 seconds
+[0m18:15:31.940162 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: ROLLBACK
+[0m18:15:32.102211 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: Close
+[0m18:15:32.104847 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a139610>]}
+[0m18:15:32.105750 [info ] [Thread-1 (]: 1 of 5 OK created sql view model shannon_test.stg_orders ....................... [[32mSUCCESS[0m in 3.69s]
+[0m18:15:32.106500 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_orders
+[0m18:15:32.107037 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_products
+[0m18:15:32.107721 [info ] [Thread-1 (]: 2 of 5 START sql view model shannon_test.stg_products .......................... [RUN]
+[0m18:15:32.108363 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_orders, now model.dbt_order_costs.stg_products)
+[0m18:15:32.108819 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_products
+[0m18:15:32.114566 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_products"
+[0m18:15:32.115957 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_products
+[0m18:15:32.124195 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_products"
+[0m18:15:32.125922 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:32.126553 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:15:32.126762 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:15:32.127255 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:32.127606 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:33.015408 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.888 seconds
+[0m18:15:33.016187 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:33.016666 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_products__dbt_tmp" as (
+    
+
+SELECT
+    id AS product_id,
+    name AS product_name,
+    description AS product_description,
+    cost AS product_cost
+FROM "dev_etleap"."shannon_test"."products"
+  ) ;
+[0m18:15:33.422847 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.405 seconds
+[0m18:15:33.428688 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:33.429230 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+alter table "dev_etleap"."shannon_test"."stg_products" rename to "stg_products__dbt_backup"
+[0m18:15:33.698343 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.268 seconds
+[0m18:15:33.703762 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:33.704310 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+alter table "dev_etleap"."shannon_test"."stg_products__dbt_tmp" rename to "stg_products"
+[0m18:15:33.942260 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.237 seconds
+[0m18:15:33.945325 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:15:33.945991 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:33.946538 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:15:34.640401 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.693 seconds
+[0m18:15:34.641428 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:34.641893 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:15:34.833889 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.191 seconds
+[0m18:15:34.838508 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_products__dbt_backup"
+[0m18:15:34.840146 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:34.840616 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_products__dbt_backup" cascade
+[0m18:15:35.006501 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.165 seconds
+[0m18:15:35.010389 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:15:35.011185 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:35.011641 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:15:35.766690 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.754 seconds
+[0m18:15:35.767629 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:15:35.768222 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:15:35.853411 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.084 seconds
+[0m18:15:35.854716 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: ROLLBACK
+[0m18:15:36.020755 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: Close
+[0m18:15:36.022241 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a23db20>]}
+[0m18:15:36.023236 [info ] [Thread-1 (]: 2 of 5 OK created sql view model shannon_test.stg_products ..................... [[32mSUCCESS[0m in 3.91s]
+[0m18:15:36.024417 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_products
+[0m18:15:36.025195 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_users
+[0m18:15:36.025887 [info ] [Thread-1 (]: 3 of 5 START sql view model shannon_test.stg_users ............................. [RUN]
+[0m18:15:36.026737 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_products, now model.dbt_order_costs.stg_users)
+[0m18:15:36.027230 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_users
+[0m18:15:36.039961 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_users"
+[0m18:15:36.042484 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_users
+[0m18:15:36.045764 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_users"
+[0m18:15:36.048238 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:36.049821 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:15:36.050593 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:15:36.051282 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:36.051886 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:36.985811 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.935 seconds
+[0m18:15:36.986496 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:36.986977 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_users__dbt_tmp" as (
+    
+
+SELECT
+    id AS user_id,
+    name AS user_name
+FROM "dev_etleap"."shannon_test"."users"
+  ) ;
+[0m18:15:37.392845 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.405 seconds
+[0m18:15:37.398993 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:37.399577 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+alter table "dev_etleap"."shannon_test"."stg_users" rename to "stg_users__dbt_backup"
+[0m18:15:37.650207 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.250 seconds
+[0m18:15:37.655551 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:37.656078 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+alter table "dev_etleap"."shannon_test"."stg_users__dbt_tmp" rename to "stg_users"
+[0m18:15:37.916600 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.260 seconds
+[0m18:15:37.922253 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:15:37.922963 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:37.923417 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:15:38.556030 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.631 seconds
+[0m18:15:38.557013 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:38.557549 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:15:38.720899 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.163 seconds
+[0m18:15:38.724612 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_users__dbt_backup"
+[0m18:15:38.726267 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:38.726860 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_users__dbt_backup" cascade
+[0m18:15:38.891005 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.163 seconds
+[0m18:15:38.892597 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:15:38.893193 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:38.893617 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:15:39.926233 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.032 seconds
+[0m18:15:39.927091 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:15:39.927533 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:15:40.021999 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.094 seconds
+[0m18:15:40.023731 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: ROLLBACK
+[0m18:15:40.187062 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: Close
+[0m18:15:40.188327 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a3f4a50>]}
+[0m18:15:40.189131 [info ] [Thread-1 (]: 3 of 5 OK created sql view model shannon_test.stg_users ........................ [[32mSUCCESS[0m in 4.16s]
+[0m18:15:40.190056 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_users
+[0m18:15:40.190588 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.costs
+[0m18:15:40.191181 [info ] [Thread-1 (]: 4 of 5 START sql table model shannon_test.costs ................................ [RUN]
+[0m18:15:40.191794 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_users, now model.dbt_order_costs.costs)
+[0m18:15:40.192299 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.costs
+[0m18:15:40.219795 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.costs"
+[0m18:15:40.221232 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.costs
+[0m18:15:40.249351 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.costs"
+[0m18:15:40.252218 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:40.252568 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:15:40.252870 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:15:40.253578 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:40.253798 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:41.141018 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.888 seconds
+[0m18:15:41.141726 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:41.142312 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+
+  
+    
+
+  create  table
+    "dev_etleap"."shannon_test"."costs__dbt_tmp"
+    
+    
+    
+  as (
+    
+
+WITH order_details AS (
+    SELECT
+        orders.order_id,
+        orders.user_id,
+        orders.product_id,
+        orders.quantity,
+        products.product_cost,
+        orders.quantity * products.product_cost AS total_cost
+    FROM "dev_etleap"."shannon_test"."stg_orders" AS orders
+    JOIN "dev_etleap"."shannon_test"."stg_products" AS products
+        ON orders.product_id = products.product_id
+)
+
+SELECT
+    order_id,
+    user_id,
+    product_id,
+    quantity,
+    product_cost,
+    total_cost
+FROM order_details
+ORDER BY order_id
+  );
+[0m18:15:41.618735 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.476 seconds
+[0m18:15:41.622722 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:41.623214 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+alter table "dev_etleap"."shannon_test"."costs" rename to "costs__dbt_backup"
+[0m18:15:42.096707 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.473 seconds
+[0m18:15:42.109134 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:42.109800 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+alter table "dev_etleap"."shannon_test"."costs__dbt_tmp" rename to "costs"
+[0m18:15:43.013040 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.902 seconds
+[0m18:15:43.024108 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:15:43.025023 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:43.026045 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:15:44.034746 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.008 seconds
+[0m18:15:44.038106 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:44.039446 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:15:44.204388 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.164 seconds
+[0m18:15:44.208447 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."costs__dbt_backup"
+[0m18:15:44.212345 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:44.212653 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+drop table if exists "dev_etleap"."shannon_test"."costs__dbt_backup" cascade
+[0m18:15:44.389280 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.176 seconds
+[0m18:15:44.390845 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:15:44.391409 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:44.391844 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:15:45.302314 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.910 seconds
+[0m18:15:45.302752 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:15:45.303182 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:15:45.385583 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.081 seconds
+[0m18:15:45.386903 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: ROLLBACK
+[0m18:15:45.549582 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: Close
+[0m18:15:45.554085 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a392150>]}
+[0m18:15:45.555710 [info ] [Thread-1 (]: 4 of 5 OK created sql table model shannon_test.costs ........................... [[32mSUCCESS[0m in 5.36s]
+[0m18:15:45.558680 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.costs
+[0m18:15:45.560536 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.spend_per_user
+[0m18:15:45.561330 [info ] [Thread-1 (]: 5 of 5 START sql table model shannon_test.spend_per_user ....................... [RUN]
+[0m18:15:45.562077 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.costs, now model.dbt_order_costs.spend_per_user)
+[0m18:15:45.562538 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.spend_per_user
+[0m18:15:45.576561 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.spend_per_user"
+[0m18:15:45.578253 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.spend_per_user
+[0m18:15:45.583054 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.spend_per_user"
+[0m18:15:45.584682 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:45.585128 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:15:45.585532 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:15:45.587728 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:45.588075 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:15:46.520125 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.935 seconds
+[0m18:15:46.520764 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:46.521029 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+
+  
+    
+
+  create  table
+    "dev_etleap"."shannon_test"."spend_per_user__dbt_tmp"
+    
+    
+    
+  as (
+    
+
+WITH user_spends AS (
+    SELECT
+        costs.user_id,
+        SUM(costs.total_cost) AS total_spend
+    FROM "dev_etleap"."shannon_test"."costs" AS costs
+    GROUP BY costs.user_id
+)
+
+SELECT
+    user_id,
+    total_spend
+FROM user_spends
+ORDER BY user_id
+  );
+[0m18:15:55.390747 [debug] [Thread-1 (]: SQL status: SUCCESS in 8.867 seconds
+[0m18:15:55.430782 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:55.431426 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+alter table "dev_etleap"."shannon_test"."spend_per_user" rename to "spend_per_user__dbt_backup"
+[0m18:15:55.911999 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.479 seconds
+[0m18:15:55.917047 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:55.921002 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+alter table "dev_etleap"."shannon_test"."spend_per_user__dbt_tmp" rename to "spend_per_user"
+[0m18:15:56.163605 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.242 seconds
+[0m18:15:56.167084 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:15:56.167784 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:56.168227 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:15:57.270696 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.102 seconds
+[0m18:15:57.272796 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:57.273404 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:15:57.437357 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.163 seconds
+[0m18:15:57.442752 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."spend_per_user__dbt_backup"
+[0m18:15:57.444400 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:57.444950 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+drop table if exists "dev_etleap"."shannon_test"."spend_per_user__dbt_backup" cascade
+[0m18:15:57.612813 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.167 seconds
+[0m18:15:57.615005 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:15:57.615621 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:57.616253 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:15:59.001235 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.384 seconds
+[0m18:15:59.002085 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:15:59.002724 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:15:59.084237 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.081 seconds
+[0m18:15:59.086778 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: ROLLBACK
+[0m18:15:59.260688 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: Close
+[0m18:15:59.264915 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f25b1991-de45-4686-839e-c607a98405bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a3ffb60>]}
+[0m18:15:59.269335 [info ] [Thread-1 (]: 5 of 5 OK created sql table model shannon_test.spend_per_user .................. [[32mSUCCESS[0m in 13.70s]
+[0m18:15:59.272462 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.spend_per_user
+[0m18:15:59.279057 [debug] [MainThread]: Using redshift connection "master"
+[0m18:15:59.280020 [debug] [MainThread]: On master: BEGIN
+[0m18:15:59.289812 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:15:59.292684 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:15:59.293010 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:16:00.277552 [debug] [MainThread]: SQL status: SUCCESS in 0.987 seconds
+[0m18:16:00.278375 [debug] [MainThread]: On master: COMMIT
+[0m18:16:00.279116 [debug] [MainThread]: Using redshift connection "master"
+[0m18:16:00.279577 [debug] [MainThread]: On master: COMMIT
+[0m18:16:00.440486 [debug] [MainThread]: SQL status: SUCCESS in 0.160 seconds
+[0m18:16:00.441007 [debug] [MainThread]: On master: Close
+[0m18:16:00.441915 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:16:00.442163 [debug] [MainThread]: Connection 'model.dbt_order_costs.spend_per_user' was properly closed.
+[0m18:16:00.442813 [info ] [MainThread]: 
+[0m18:16:00.443367 [info ] [MainThread]: Finished running 3 view models, 2 table models in 0 hours 0 minutes and 36.69 seconds (36.69s).
+[0m18:16:00.444780 [debug] [MainThread]: Command end result
+[0m18:16:00.489422 [info ] [MainThread]: 
+[0m18:16:00.490318 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:16:00.491080 [info ] [MainThread]: 
+[0m18:16:00.493258 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m18:16:00.498378 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 38.54692, "process_user_time": 2.430754, "process_kernel_time": 0.701644, "process_mem_max_rss": "122667008", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:16:00.499090 [debug] [MainThread]: Command `dbt build` succeeded at 18:16:00.498979 after 38.55 seconds
+[0m18:16:00.499769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b538f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a263b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a263dd0>]}
+[0m18:16:00.500667 [debug] [MainThread]: Flushing usage events
+[0m18:24:58.064138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106932510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1386dfd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1386dfed0>]}
+
+
+============================== 18:24:58.069326 | fe68c5fb-853b-485c-bd73-b525e5ceafef ==============================
+[0m18:24:58.069326 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:24:58.070017 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/sksangha/dbt_order_costs/logs', 'debug': 'False', 'profiles_dir': '/Users/sksangha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt build --selector all_models', 'send_anonymous_usage_stats': 'True'}
+[0m18:24:58.223260 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m18:24:58.223955 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m18:24:58.486105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107330d60>]}
+[0m18:24:58.537168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x138774d10>]}
+[0m18:24:58.540098 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m18:24:58.565789 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:24:58.687589 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 5 files changed.
+[0m18:24:58.688654 [debug] [MainThread]: Partial parsing: updated file: dbt_order_costs://models/staging/stg_users.sql
+[0m18:24:58.689254 [debug] [MainThread]: Partial parsing: updated file: dbt_order_costs://models/metrics/spend_per_user.sql
+[0m18:24:58.689622 [debug] [MainThread]: Partial parsing: updated file: dbt_order_costs://models/staging/stg_products.sql
+[0m18:24:58.689969 [debug] [MainThread]: Partial parsing: updated file: dbt_order_costs://models/staging/stg_orders.sql
+[0m18:24:58.690199 [debug] [MainThread]: Partial parsing: updated file: dbt_order_costs://models/metrics/costs.sql
+[0m18:24:58.879202 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_order_costs.costs
+- models.dbt_order_costs.example_model
+- models.dbt_order_costs.spend_per_user
+[0m18:24:58.889072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1393bfa50>]}
+[0m18:24:58.978772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13929a030>]}
+[0m18:24:58.979206 [info ] [MainThread]: Found 5 models, 3 sources, 489 macros
+[0m18:24:58.981859 [info ] [MainThread]: 
+[0m18:24:58.982634 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m18:24:58.985995 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_etleap'
+[0m18:24:59.002332 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap"
+[0m18:24:59.002791 [debug] [ThreadPool]: On list_dev_etleap: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "list_dev_etleap"} */
+
+    select distinct nspname from pg_namespace
+[0m18:24:59.003037 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:24:59.008454 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:24:59.009246 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:00.069009 [debug] [ThreadPool]: SQL status: SUCCESS in 1.066 seconds
+[0m18:25:00.075090 [debug] [ThreadPool]: On list_dev_etleap: Close
+[0m18:25:00.077680 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_etleap, now list_dev_etleap_shannon_test)
+[0m18:25:00.092617 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap_shannon_test"
+[0m18:25:00.093415 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: BEGIN
+[0m18:25:00.093744 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:25:00.095017 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:00.095925 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:01.043536 [debug] [ThreadPool]: SQL status: SUCCESS in 0.950 seconds
+[0m18:25:01.043977 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap_shannon_test"
+[0m18:25:01.044571 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "list_dev_etleap_shannon_test"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'shannon_test'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'shannon_test'
+[0m18:25:01.398399 [debug] [ThreadPool]: SQL status: SUCCESS in 0.353 seconds
+[0m18:25:01.401114 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: ROLLBACK
+[0m18:25:01.573520 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: Close
+[0m18:25:01.597900 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:01.598477 [debug] [MainThread]: On master: BEGIN
+[0m18:25:01.598687 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:25:01.599143 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:01.599442 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:02.500235 [debug] [MainThread]: SQL status: SUCCESS in 0.901 seconds
+[0m18:25:02.500867 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:02.501340 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m18:25:02.987201 [debug] [MainThread]: SQL status: SUCCESS in 0.485 seconds
+[0m18:25:02.990604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139f71470>]}
+[0m18:25:02.991165 [debug] [MainThread]: On master: ROLLBACK
+[0m18:25:03.179727 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:03.180392 [debug] [MainThread]: On master: BEGIN
+[0m18:25:03.276056 [debug] [MainThread]: SQL status: SUCCESS in 0.095 seconds
+[0m18:25:03.276877 [debug] [MainThread]: On master: COMMIT
+[0m18:25:03.277561 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:03.277980 [debug] [MainThread]: On master: COMMIT
+[0m18:25:03.446428 [debug] [MainThread]: SQL status: SUCCESS in 0.168 seconds
+[0m18:25:03.447487 [debug] [MainThread]: On master: Close
+[0m18:25:03.448613 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:25:03.449458 [info ] [MainThread]: 
+[0m18:25:03.453037 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_orders
+[0m18:25:03.453883 [info ] [Thread-1 (]: 1 of 5 START sql view model shannon_test.stg_orders ............................ [RUN]
+[0m18:25:03.454964 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_etleap_shannon_test, now model.dbt_order_costs.stg_orders)
+[0m18:25:03.455657 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_orders
+[0m18:25:03.466335 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_orders"
+[0m18:25:03.468004 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_orders
+[0m18:25:03.505982 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_orders"
+[0m18:25:03.508227 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:03.508431 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:25:03.508593 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:03.509179 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:03.509787 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:04.425185 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.916 seconds
+[0m18:25:04.425868 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:04.426341 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_orders__dbt_tmp" as (
+    
+
+SELECT
+    id AS order_id,
+    user_id,
+    product_id,
+    quantity
+FROM "dev_etleap"."shannon_test"."orders"
+  ) ;
+[0m18:25:04.830650 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.404 seconds
+[0m18:25:04.850161 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:04.850649 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+alter table "dev_etleap"."shannon_test"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m18:25:05.095301 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.244 seconds
+[0m18:25:05.099395 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:05.100081 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+alter table "dev_etleap"."shannon_test"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m18:25:05.349459 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.249 seconds
+[0m18:25:05.370748 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:05.371160 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:05.371342 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:06.187155 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.815 seconds
+[0m18:25:06.188798 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:06.189709 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:25:06.353426 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.163 seconds
+[0m18:25:06.367387 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_orders__dbt_backup"
+[0m18:25:06.373395 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:06.374168 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_orders__dbt_backup" cascade
+[0m18:25:06.539695 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.165 seconds
+[0m18:25:06.540472 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:06.541083 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:06.542213 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:07.131065 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.588 seconds
+[0m18:25:07.132165 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:07.132477 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:25:07.212953 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.080 seconds
+[0m18:25:07.214756 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: ROLLBACK
+[0m18:25:07.378863 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: Close
+[0m18:25:07.381956 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a2a9230>]}
+[0m18:25:07.382876 [info ] [Thread-1 (]: 1 of 5 OK created sql view model shannon_test.stg_orders ....................... [[32mSUCCESS[0m in 3.93s]
+[0m18:25:07.383708 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_orders
+[0m18:25:07.384316 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_products
+[0m18:25:07.384908 [info ] [Thread-1 (]: 2 of 5 START sql view model shannon_test.stg_products .......................... [RUN]
+[0m18:25:07.385478 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_orders, now model.dbt_order_costs.stg_products)
+[0m18:25:07.386132 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_products
+[0m18:25:07.395482 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_products"
+[0m18:25:07.396300 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_products
+[0m18:25:07.400913 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_products"
+[0m18:25:07.402979 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:07.403236 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:25:07.403473 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:07.404186 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:07.404519 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:08.296624 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.893 seconds
+[0m18:25:08.297464 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:08.298263 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_products__dbt_tmp" as (
+    
+
+SELECT
+    id AS product_id,
+    name AS product_name,
+    description AS product_description,
+    cost AS product_cost
+FROM "dev_etleap"."shannon_test"."products"
+  ) ;
+[0m18:25:08.701412 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.402 seconds
+[0m18:25:08.706708 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:08.707250 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+alter table "dev_etleap"."shannon_test"."stg_products" rename to "stg_products__dbt_backup"
+[0m18:25:08.950567 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.243 seconds
+[0m18:25:08.955606 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:08.956681 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+alter table "dev_etleap"."shannon_test"."stg_products__dbt_tmp" rename to "stg_products"
+[0m18:25:09.199115 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.242 seconds
+[0m18:25:09.200559 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:25:09.200820 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:09.201209 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:25:10.135199 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.933 seconds
+[0m18:25:10.141512 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:10.142120 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:25:10.322748 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.161 seconds
+[0m18:25:10.324662 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_products__dbt_backup"
+[0m18:25:10.325567 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:10.326055 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_products__dbt_backup" cascade
+[0m18:25:10.536839 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.210 seconds
+[0m18:25:10.541650 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:25:10.543322 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:10.544595 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:25:11.037979 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.493 seconds
+[0m18:25:11.039592 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:11.040502 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:25:11.125090 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.084 seconds
+[0m18:25:11.126589 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: ROLLBACK
+[0m18:25:11.286266 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: Close
+[0m18:25:11.287624 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a186810>]}
+[0m18:25:11.295177 [info ] [Thread-1 (]: 2 of 5 OK created sql view model shannon_test.stg_products ..................... [[32mSUCCESS[0m in 3.90s]
+[0m18:25:11.295981 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_products
+[0m18:25:11.296408 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_users
+[0m18:25:11.296787 [info ] [Thread-1 (]: 3 of 5 START sql view model shannon_test.stg_users ............................. [RUN]
+[0m18:25:11.297468 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_products, now model.dbt_order_costs.stg_users)
+[0m18:25:11.297897 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_users
+[0m18:25:11.301593 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_users"
+[0m18:25:11.302353 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_users
+[0m18:25:11.318631 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_users"
+[0m18:25:11.319992 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:11.320230 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:25:11.320557 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:11.320824 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:11.321220 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:12.255555 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.935 seconds
+[0m18:25:12.256321 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:12.256799 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_users__dbt_tmp" as (
+    
+
+SELECT
+    id AS user_id,
+    name AS user_name
+FROM "dev_etleap"."shannon_test"."users"
+  ) ;
+[0m18:25:12.660328 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.400 seconds
+[0m18:25:12.667811 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:12.668509 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+alter table "dev_etleap"."shannon_test"."stg_users" rename to "stg_users__dbt_backup"
+[0m18:25:12.912257 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.243 seconds
+[0m18:25:12.985023 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:12.985462 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+alter table "dev_etleap"."shannon_test"."stg_users__dbt_tmp" rename to "stg_users"
+[0m18:25:13.229972 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.244 seconds
+[0m18:25:13.232861 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:25:13.233578 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:13.234037 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:25:14.204089 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.969 seconds
+[0m18:25:14.206693 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:14.207134 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:25:14.368797 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.161 seconds
+[0m18:25:14.371440 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_users__dbt_backup"
+[0m18:25:14.372651 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:14.372898 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_users__dbt_backup" cascade
+[0m18:25:14.985303 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.612 seconds
+[0m18:25:14.987147 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:25:14.987857 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:14.988441 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:25:15.494676 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.505 seconds
+[0m18:25:15.495594 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:25:15.496217 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:25:15.576940 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.080 seconds
+[0m18:25:15.579498 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: ROLLBACK
+[0m18:25:15.746709 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: Close
+[0m18:25:15.748654 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139f968e0>]}
+[0m18:25:15.750035 [info ] [Thread-1 (]: 3 of 5 OK created sql view model shannon_test.stg_users ........................ [[32mSUCCESS[0m in 4.45s]
+[0m18:25:15.750873 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_users
+[0m18:25:15.751177 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.costs
+[0m18:25:15.752121 [info ] [Thread-1 (]: 4 of 5 START sql table model shannon_test.costs ................................ [RUN]
+[0m18:25:15.752753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_users, now model.dbt_order_costs.costs)
+[0m18:25:15.753079 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.costs
+[0m18:25:15.762631 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.costs"
+[0m18:25:15.764764 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.costs
+[0m18:25:15.802275 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.costs"
+[0m18:25:15.806343 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:15.806669 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:25:15.807366 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:15.807920 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:15.808281 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:16.817575 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.010 seconds
+[0m18:25:16.818790 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:16.819301 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+
+  
+    
+
+  create  table
+    "dev_etleap"."shannon_test"."costs__dbt_tmp"
+    
+    
+    
+  as (
+    
+
+WITH order_details AS (
+    SELECT
+        orders.order_id,
+        orders.user_id,
+        orders.product_id,
+        orders.quantity,
+        products.product_cost,
+        orders.quantity * products.product_cost AS total_cost
+    FROM "dev_etleap"."shannon_test"."stg_orders" AS orders
+    JOIN "dev_etleap"."shannon_test"."stg_products" AS products
+        ON orders.product_id = products.product_id
+)
+
+SELECT
+    order_id,
+    user_id,
+    product_id,
+    quantity,
+    product_cost,
+    total_cost
+FROM order_details
+ORDER BY order_id
+  );
+[0m18:25:17.816846 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.997 seconds
+[0m18:25:17.823418 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:17.824137 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+alter table "dev_etleap"."shannon_test"."costs" rename to "costs__dbt_backup"
+[0m18:25:18.298959 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.474 seconds
+[0m18:25:18.311643 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:18.312619 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+alter table "dev_etleap"."shannon_test"."costs__dbt_tmp" rename to "costs"
+[0m18:25:18.564876 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.251 seconds
+[0m18:25:18.573233 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:25:18.573910 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:18.574433 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:25:19.758300 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.183 seconds
+[0m18:25:19.759406 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:19.759953 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:25:19.940649 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.180 seconds
+[0m18:25:19.950006 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."costs__dbt_backup"
+[0m18:25:19.957850 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:19.958697 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+drop table if exists "dev_etleap"."shannon_test"."costs__dbt_backup" cascade
+[0m18:25:20.297979 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.339 seconds
+[0m18:25:20.300451 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:25:20.301260 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:20.301978 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:25:21.769928 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.467 seconds
+[0m18:25:21.771033 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:25:21.771635 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:25:21.852513 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.080 seconds
+[0m18:25:21.853615 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: ROLLBACK
+[0m18:25:22.041985 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: Close
+[0m18:25:22.042898 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1393b1d10>]}
+[0m18:25:22.045531 [info ] [Thread-1 (]: 4 of 5 OK created sql table model shannon_test.costs ........................... [[32mSUCCESS[0m in 6.29s]
+[0m18:25:22.046723 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.costs
+[0m18:25:22.049828 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.spend_per_user
+[0m18:25:22.051414 [info ] [Thread-1 (]: 5 of 5 START sql table model shannon_test.spend_per_user ....................... [RUN]
+[0m18:25:22.053094 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.costs, now model.dbt_order_costs.spend_per_user)
+[0m18:25:22.053917 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.spend_per_user
+[0m18:25:22.058960 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.spend_per_user"
+[0m18:25:22.060873 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.spend_per_user
+[0m18:25:22.069937 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.spend_per_user"
+[0m18:25:22.073230 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:22.074160 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:25:22.075058 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:22.079118 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:22.085703 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:22.988566 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.913 seconds
+[0m18:25:22.989875 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:22.990393 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+
+  
+    
+
+  create  table
+    "dev_etleap"."shannon_test"."spend_per_user__dbt_tmp"
+    
+    
+    
+  as (
+    
+
+WITH user_spends AS (
+    SELECT
+        costs.user_id,
+        SUM(costs.total_cost) AS total_spend
+    FROM "dev_etleap"."shannon_test"."costs" AS costs
+    GROUP BY costs.user_id
+)
+
+SELECT
+    user_id,
+    total_spend
+FROM user_spends
+ORDER BY user_id
+  );
+[0m18:25:23.595129 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.604 seconds
+[0m18:25:23.601769 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:23.602447 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+alter table "dev_etleap"."shannon_test"."spend_per_user" rename to "spend_per_user__dbt_backup"
+[0m18:25:24.073557 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.470 seconds
+[0m18:25:24.078478 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:24.078965 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+alter table "dev_etleap"."shannon_test"."spend_per_user__dbt_tmp" rename to "spend_per_user"
+[0m18:25:24.321850 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.242 seconds
+[0m18:25:24.324938 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:25:24.325544 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:24.325825 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:25:25.078791 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.753 seconds
+[0m18:25:25.079367 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:25.079566 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:25:25.244137 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.164 seconds
+[0m18:25:25.247939 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."spend_per_user__dbt_backup"
+[0m18:25:25.249679 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:25.250732 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+drop table if exists "dev_etleap"."shannon_test"."spend_per_user__dbt_backup" cascade
+[0m18:25:25.430174 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.179 seconds
+[0m18:25:25.431357 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:25:25.431849 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:25.432082 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:25:26.136070 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.703 seconds
+[0m18:25:26.137054 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:25:26.137927 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:25:26.222409 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.084 seconds
+[0m18:25:26.224188 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: ROLLBACK
+[0m18:25:26.389718 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: Close
+[0m18:25:26.391463 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe68c5fb-853b-485c-bd73-b525e5ceafef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x139386a50>]}
+[0m18:25:26.392596 [info ] [Thread-1 (]: 5 of 5 OK created sql table model shannon_test.spend_per_user .................. [[32mSUCCESS[0m in 4.34s]
+[0m18:25:26.393707 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.spend_per_user
+[0m18:25:26.396930 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:26.397461 [debug] [MainThread]: On master: BEGIN
+[0m18:25:26.397974 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:25:26.398565 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:26.399009 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:27.345748 [debug] [MainThread]: SQL status: SUCCESS in 0.948 seconds
+[0m18:25:27.346757 [debug] [MainThread]: On master: COMMIT
+[0m18:25:27.347609 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:27.348126 [debug] [MainThread]: On master: COMMIT
+[0m18:25:27.508388 [debug] [MainThread]: SQL status: SUCCESS in 0.160 seconds
+[0m18:25:27.509055 [debug] [MainThread]: On master: Close
+[0m18:25:27.509949 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:25:27.510432 [debug] [MainThread]: Connection 'model.dbt_order_costs.spend_per_user' was properly closed.
+[0m18:25:27.511055 [info ] [MainThread]: 
+[0m18:25:27.511566 [info ] [MainThread]: Finished running 3 view models, 2 table models in 0 hours 0 minutes and 28.53 seconds (28.53s).
+[0m18:25:27.513369 [debug] [MainThread]: Command end result
+[0m18:25:27.577494 [info ] [MainThread]: 
+[0m18:25:27.578376 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:25:27.578628 [info ] [MainThread]: 
+[0m18:25:27.578825 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m18:25:27.582908 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 29.587772, "process_user_time": 1.91776, "process_kernel_time": 0.638695, "process_mem_max_rss": "124764160", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:25:27.584707 [debug] [MainThread]: Command `dbt build` succeeded at 18:25:27.584125 after 29.59 seconds
+[0m18:25:27.585278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1384db620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10325e120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a2b6cf0>]}
+[0m18:25:27.585654 [debug] [MainThread]: Flushing usage events
+[0m18:25:50.018838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103632510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053dfd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053dfed0>]}
+
+
+============================== 18:25:50.026457 | 334584c7-acda-4d58-a59e-95bcff4dbed0 ==============================
+[0m18:25:50.026457 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:25:50.027770 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/sksangha/dbt_order_costs/logs', 'debug': 'False', 'profiles_dir': '/Users/sksangha/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt build --selector all_models', 'send_anonymous_usage_stats': 'True'}
+[0m18:25:50.176291 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m18:25:50.177003 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m18:25:50.341517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103ee0d60>]}
+[0m18:25:50.408360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105474d10>]}
+[0m18:25:50.409902 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m18:25:50.439440 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:25:50.602769 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:25:50.603371 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:25:50.612094 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_order_costs.spend_per_user
+- models.dbt_order_costs.costs
+- models.dbt_order_costs.example_model
+[0m18:25:50.639427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106062850>]}
+[0m18:25:50.721031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f464e0>]}
+[0m18:25:50.721560 [info ] [MainThread]: Found 5 models, 3 sources, 489 macros
+[0m18:25:50.723344 [info ] [MainThread]: 
+[0m18:25:50.723844 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m18:25:50.727934 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_etleap'
+[0m18:25:50.747484 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap"
+[0m18:25:50.747992 [debug] [ThreadPool]: On list_dev_etleap: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "list_dev_etleap"} */
+
+    select distinct nspname from pg_namespace
+[0m18:25:50.748484 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:25:50.752552 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:50.754390 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:51.836047 [debug] [ThreadPool]: SQL status: SUCCESS in 1.088 seconds
+[0m18:25:51.842309 [debug] [ThreadPool]: On list_dev_etleap: Close
+[0m18:25:51.846419 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_etleap, now list_dev_etleap_shannon_test)
+[0m18:25:51.854525 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap_shannon_test"
+[0m18:25:51.855592 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: BEGIN
+[0m18:25:51.855950 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:25:51.856300 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:51.856751 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:52.769149 [debug] [ThreadPool]: SQL status: SUCCESS in 0.913 seconds
+[0m18:25:52.769887 [debug] [ThreadPool]: Using redshift connection "list_dev_etleap_shannon_test"
+[0m18:25:52.770349 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "list_dev_etleap_shannon_test"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'shannon_test'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'shannon_test'
+[0m18:25:53.067065 [debug] [ThreadPool]: SQL status: SUCCESS in 0.296 seconds
+[0m18:25:53.069363 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: ROLLBACK
+[0m18:25:53.232117 [debug] [ThreadPool]: On list_dev_etleap_shannon_test: Close
+[0m18:25:53.251583 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:53.252249 [debug] [MainThread]: On master: BEGIN
+[0m18:25:53.252458 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:25:53.253159 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:53.253473 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:54.154956 [debug] [MainThread]: SQL status: SUCCESS in 0.902 seconds
+[0m18:25:54.155608 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:54.156103 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m18:25:54.541697 [debug] [MainThread]: SQL status: SUCCESS in 0.385 seconds
+[0m18:25:54.545124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069f0590>]}
+[0m18:25:54.545724 [debug] [MainThread]: On master: ROLLBACK
+[0m18:25:54.714205 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:54.714810 [debug] [MainThread]: On master: BEGIN
+[0m18:25:54.796724 [debug] [MainThread]: SQL status: SUCCESS in 0.081 seconds
+[0m18:25:54.797834 [debug] [MainThread]: On master: COMMIT
+[0m18:25:54.798903 [debug] [MainThread]: Using redshift connection "master"
+[0m18:25:54.799759 [debug] [MainThread]: On master: COMMIT
+[0m18:25:54.961178 [debug] [MainThread]: SQL status: SUCCESS in 0.161 seconds
+[0m18:25:54.961819 [debug] [MainThread]: On master: Close
+[0m18:25:54.963037 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:25:54.963549 [info ] [MainThread]: 
+[0m18:25:54.969108 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_orders
+[0m18:25:54.970281 [info ] [Thread-1 (]: 1 of 5 START sql view model shannon_test.stg_orders ............................ [RUN]
+[0m18:25:54.973386 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_etleap_shannon_test, now model.dbt_order_costs.stg_orders)
+[0m18:25:54.974027 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_orders
+[0m18:25:54.986167 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_orders"
+[0m18:25:54.987182 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_orders
+[0m18:25:55.022898 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_orders"
+[0m18:25:55.025493 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:55.026230 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:25:55.026574 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:55.027480 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:55.028198 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:55.928660 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.902 seconds
+[0m18:25:55.929621 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:55.930100 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_orders__dbt_tmp" as (
+    
+
+SELECT
+    id AS order_id,
+    user_id,
+    product_id,
+    quantity
+FROM "dev_etleap"."shannon_test"."orders"
+  ) ;
+[0m18:25:56.356100 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.425 seconds
+[0m18:25:56.368154 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:56.368816 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+alter table "dev_etleap"."shannon_test"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m18:25:56.618389 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.249 seconds
+[0m18:25:56.624026 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:56.624623 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+alter table "dev_etleap"."shannon_test"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m18:25:56.866178 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.241 seconds
+[0m18:25:56.889276 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:56.890264 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:56.891021 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:57.434516 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.543 seconds
+[0m18:25:57.435935 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:57.436494 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:25:57.596572 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.159 seconds
+[0m18:25:57.608722 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_orders__dbt_backup"
+[0m18:25:57.617132 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:57.617649 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_orders"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_orders__dbt_backup" cascade
+[0m18:25:57.782958 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.165 seconds
+[0m18:25:57.785118 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:57.786184 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:57.786650 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: COMMIT
+[0m18:25:58.257453 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.470 seconds
+[0m18:25:58.258203 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_orders"
+[0m18:25:58.258531 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: BEGIN
+[0m18:25:58.342024 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.083 seconds
+[0m18:25:58.344815 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: ROLLBACK
+[0m18:25:58.506699 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_orders: Close
+[0m18:25:58.509216 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bd20d0>]}
+[0m18:25:58.510216 [info ] [Thread-1 (]: 1 of 5 OK created sql view model shannon_test.stg_orders ....................... [[32mSUCCESS[0m in 3.54s]
+[0m18:25:58.511028 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_orders
+[0m18:25:58.511638 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_products
+[0m18:25:58.512292 [info ] [Thread-1 (]: 2 of 5 START sql view model shannon_test.stg_products .......................... [RUN]
+[0m18:25:58.513048 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_orders, now model.dbt_order_costs.stg_products)
+[0m18:25:58.513512 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_products
+[0m18:25:58.519677 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_products"
+[0m18:25:58.521387 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_products
+[0m18:25:58.531773 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_products"
+[0m18:25:58.534804 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:58.535199 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:25:58.535565 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:25:58.536119 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:25:58.536457 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:25:59.424575 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.889 seconds
+[0m18:25:59.425267 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:59.425782 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_products__dbt_tmp" as (
+    
+
+SELECT
+    id AS product_id,
+    name AS product_name,
+    description AS product_description,
+    cost AS product_cost
+FROM "dev_etleap"."shannon_test"."products"
+  ) ;
+[0m18:25:59.825269 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.399 seconds
+[0m18:25:59.831130 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:25:59.831687 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+alter table "dev_etleap"."shannon_test"."stg_products" rename to "stg_products__dbt_backup"
+[0m18:26:00.074132 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.242 seconds
+[0m18:26:00.080229 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:26:00.080851 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+alter table "dev_etleap"."shannon_test"."stg_products__dbt_tmp" rename to "stg_products"
+[0m18:26:00.322499 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.241 seconds
+[0m18:26:00.325233 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:26:00.325903 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:26:00.326332 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:26:00.889553 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.563 seconds
+[0m18:26:00.890499 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:26:00.890949 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:26:01.059545 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.168 seconds
+[0m18:26:01.063279 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_products__dbt_backup"
+[0m18:26:01.064806 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:26:01.065329 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_products"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_products__dbt_backup" cascade
+[0m18:26:01.230496 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.164 seconds
+[0m18:26:01.232087 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:26:01.232582 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:26:01.232815 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: COMMIT
+[0m18:26:01.781951 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.549 seconds
+[0m18:26:01.783209 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_products"
+[0m18:26:01.783627 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: BEGIN
+[0m18:26:01.867613 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.083 seconds
+[0m18:26:01.869565 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: ROLLBACK
+[0m18:26:02.042343 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_products: Close
+[0m18:26:02.056423 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b89cd0>]}
+[0m18:26:02.063110 [info ] [Thread-1 (]: 2 of 5 OK created sql view model shannon_test.stg_products ..................... [[32mSUCCESS[0m in 3.54s]
+[0m18:26:02.063559 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_products
+[0m18:26:02.071898 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.stg_users
+[0m18:26:02.074719 [info ] [Thread-1 (]: 3 of 5 START sql view model shannon_test.stg_users ............................. [RUN]
+[0m18:26:02.081305 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_products, now model.dbt_order_costs.stg_users)
+[0m18:26:02.082807 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.stg_users
+[0m18:26:02.108006 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.stg_users"
+[0m18:26:02.110885 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.stg_users
+[0m18:26:02.120924 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.stg_users"
+[0m18:26:02.123418 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:02.123686 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:26:02.123860 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:26:02.124460 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:26:02.136904 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:26:03.117180 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.993 seconds
+[0m18:26:03.118069 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:03.118732 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+
+
+  create view "dev_etleap"."shannon_test"."stg_users__dbt_tmp" as (
+    
+
+SELECT
+    id AS user_id,
+    name AS user_name
+FROM "dev_etleap"."shannon_test"."users"
+  ) ;
+[0m18:26:03.523748 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.404 seconds
+[0m18:26:03.528952 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:03.529538 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+alter table "dev_etleap"."shannon_test"."stg_users" rename to "stg_users__dbt_backup"
+[0m18:26:03.790957 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.261 seconds
+[0m18:26:03.796141 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:03.796717 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+alter table "dev_etleap"."shannon_test"."stg_users__dbt_tmp" rename to "stg_users"
+[0m18:26:04.039663 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.242 seconds
+[0m18:26:04.042642 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:26:04.043276 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:04.044381 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:26:04.647310 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.602 seconds
+[0m18:26:04.648382 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:04.648995 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:26:04.811866 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.162 seconds
+[0m18:26:04.816023 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."stg_users__dbt_backup"
+[0m18:26:04.817492 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:04.817951 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.stg_users"} */
+drop view if exists "dev_etleap"."shannon_test"."stg_users__dbt_backup" cascade
+[0m18:26:04.982698 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.164 seconds
+[0m18:26:04.984280 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:26:04.984883 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:04.985318 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: COMMIT
+[0m18:26:05.719293 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.733 seconds
+[0m18:26:05.721436 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.stg_users"
+[0m18:26:05.722914 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: BEGIN
+[0m18:26:05.803645 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.080 seconds
+[0m18:26:05.805710 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: ROLLBACK
+[0m18:26:05.969445 [debug] [Thread-1 (]: On model.dbt_order_costs.stg_users: Close
+[0m18:26:05.971344 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bb2a40>]}
+[0m18:26:05.972490 [info ] [Thread-1 (]: 3 of 5 OK created sql view model shannon_test.stg_users ........................ [[32mSUCCESS[0m in 3.89s]
+[0m18:26:05.974173 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.stg_users
+[0m18:26:05.975061 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.costs
+[0m18:26:05.975689 [info ] [Thread-1 (]: 4 of 5 START sql table model shannon_test.costs ................................ [RUN]
+[0m18:26:05.976487 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.stg_users, now model.dbt_order_costs.costs)
+[0m18:26:05.976986 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.costs
+[0m18:26:05.989513 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.costs"
+[0m18:26:05.990133 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.costs
+[0m18:26:06.020491 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.costs"
+[0m18:26:06.023351 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:06.024192 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:26:06.024835 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:26:06.025899 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:26:06.026628 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:26:06.943375 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.918 seconds
+[0m18:26:06.944402 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:06.944688 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+
+  
+    
+
+  create  table
+    "dev_etleap"."shannon_test"."costs__dbt_tmp"
+    
+    
+    
+  as (
+    
+
+WITH order_details AS (
+    SELECT
+        orders.order_id,
+        orders.user_id,
+        orders.product_id,
+        orders.quantity,
+        products.product_cost,
+        orders.quantity * products.product_cost AS total_cost
+    FROM "dev_etleap"."shannon_test"."stg_orders" AS orders
+    JOIN "dev_etleap"."shannon_test"."stg_products" AS products
+        ON orders.product_id = products.product_id
+)
+
+SELECT
+    order_id,
+    user_id,
+    product_id,
+    quantity,
+    product_cost,
+    total_cost
+FROM order_details
+ORDER BY order_id
+  );
+[0m18:26:07.373224 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.428 seconds
+[0m18:26:07.376890 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:07.377445 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+alter table "dev_etleap"."shannon_test"."costs" rename to "costs__dbt_backup"
+[0m18:26:07.861117 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.483 seconds
+[0m18:26:07.868769 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:07.869379 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+alter table "dev_etleap"."shannon_test"."costs__dbt_tmp" rename to "costs"
+[0m18:26:08.110915 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.241 seconds
+[0m18:26:08.117888 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:26:08.118302 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:08.118681 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:26:10.036399 [debug] [Thread-1 (]: SQL status: SUCCESS in 1.917 seconds
+[0m18:26:10.042516 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:10.043192 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:26:10.204066 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.160 seconds
+[0m18:26:10.209457 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."costs__dbt_backup"
+[0m18:26:10.216714 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:10.217434 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.costs"} */
+drop table if exists "dev_etleap"."shannon_test"."costs__dbt_backup" cascade
+[0m18:26:10.386502 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.168 seconds
+[0m18:26:10.388225 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:26:10.389070 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:10.390003 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: COMMIT
+[0m18:26:10.956134 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.565 seconds
+[0m18:26:10.957203 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.costs"
+[0m18:26:10.958216 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: BEGIN
+[0m18:26:11.039705 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.080 seconds
+[0m18:26:11.041272 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: ROLLBACK
+[0m18:26:11.204141 [debug] [Thread-1 (]: On model.dbt_order_costs.costs: Close
+[0m18:26:11.205341 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ef2df0>]}
+[0m18:26:11.206146 [info ] [Thread-1 (]: 4 of 5 OK created sql table model shannon_test.costs ........................... [[32mSUCCESS[0m in 5.23s]
+[0m18:26:11.206960 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.costs
+[0m18:26:11.207985 [debug] [Thread-1 (]: Began running node model.dbt_order_costs.spend_per_user
+[0m18:26:11.208608 [info ] [Thread-1 (]: 5 of 5 START sql table model shannon_test.spend_per_user ....................... [RUN]
+[0m18:26:11.209292 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_order_costs.costs, now model.dbt_order_costs.spend_per_user)
+[0m18:26:11.209753 [debug] [Thread-1 (]: Began compiling node model.dbt_order_costs.spend_per_user
+[0m18:26:11.215460 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_order_costs.spend_per_user"
+[0m18:26:11.217328 [debug] [Thread-1 (]: Began executing node model.dbt_order_costs.spend_per_user
+[0m18:26:11.230779 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_order_costs.spend_per_user"
+[0m18:26:11.232343 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:11.232835 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:26:11.233145 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:26:11.233536 [debug] [Thread-1 (]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:26:11.234126 [debug] [Thread-1 (]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:26:12.125124 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.892 seconds
+[0m18:26:12.125807 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:12.126446 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+
+  
+    
+
+  create  table
+    "dev_etleap"."shannon_test"."spend_per_user__dbt_tmp"
+    
+    
+    
+  as (
+    
+
+WITH user_spends AS (
+    SELECT
+        costs.user_id,
+        SUM(costs.total_cost) AS total_spend
+    FROM "dev_etleap"."shannon_test"."costs" AS costs
+    GROUP BY costs.user_id
+)
+
+SELECT
+    user_id,
+    total_spend
+FROM user_spends
+ORDER BY user_id
+  );
+[0m18:26:12.594409 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.467 seconds
+[0m18:26:12.600151 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:12.600898 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+alter table "dev_etleap"."shannon_test"."spend_per_user" rename to "spend_per_user__dbt_backup"
+[0m18:26:13.073214 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.472 seconds
+[0m18:26:13.078386 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:13.079167 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+alter table "dev_etleap"."shannon_test"."spend_per_user__dbt_tmp" rename to "spend_per_user"
+[0m18:26:13.321650 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.242 seconds
+[0m18:26:13.335719 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:26:13.336601 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:13.337421 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:26:14.222439 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.884 seconds
+[0m18:26:14.223969 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:14.224543 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:26:14.386431 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.161 seconds
+[0m18:26:14.390227 [debug] [Thread-1 (]: Applying DROP to: "dev_etleap"."shannon_test"."spend_per_user__dbt_backup"
+[0m18:26:14.392142 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:14.392762 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: /* {"app": "dbt", "dbt_version": "1.8.8", "profile_name": "dbt_order_costs", "target_name": "dev", "node_id": "model.dbt_order_costs.spend_per_user"} */
+drop table if exists "dev_etleap"."shannon_test"."spend_per_user__dbt_backup" cascade
+[0m18:26:14.560458 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.167 seconds
+[0m18:26:14.562616 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:26:14.563746 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:14.564253 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: COMMIT
+[0m18:26:15.083706 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.519 seconds
+[0m18:26:15.084781 [debug] [Thread-1 (]: Using redshift connection "model.dbt_order_costs.spend_per_user"
+[0m18:26:15.085310 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: BEGIN
+[0m18:26:15.167351 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.081 seconds
+[0m18:26:15.168715 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: ROLLBACK
+[0m18:26:15.333046 [debug] [Thread-1 (]: On model.dbt_order_costs.spend_per_user: Close
+[0m18:26:15.334275 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '334584c7-acda-4d58-a59e-95bcff4dbed0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10701a050>]}
+[0m18:26:15.335352 [info ] [Thread-1 (]: 5 of 5 OK created sql table model shannon_test.spend_per_user .................. [[32mSUCCESS[0m in 4.12s]
+[0m18:26:15.335863 [debug] [Thread-1 (]: Finished running node model.dbt_order_costs.spend_per_user
+[0m18:26:15.337386 [debug] [MainThread]: Using redshift connection "master"
+[0m18:26:15.337895 [debug] [MainThread]: On master: BEGIN
+[0m18:26:15.338286 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:26:15.338798 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m18:26:15.339031 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m18:26:16.226911 [debug] [MainThread]: SQL status: SUCCESS in 0.889 seconds
+[0m18:26:16.227684 [debug] [MainThread]: On master: COMMIT
+[0m18:26:16.228442 [debug] [MainThread]: Using redshift connection "master"
+[0m18:26:16.229265 [debug] [MainThread]: On master: COMMIT
+[0m18:26:16.394402 [debug] [MainThread]: SQL status: SUCCESS in 0.160 seconds
+[0m18:26:16.395267 [debug] [MainThread]: On master: Close
+[0m18:26:16.396831 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:26:16.397365 [debug] [MainThread]: Connection 'model.dbt_order_costs.spend_per_user' was properly closed.
+[0m18:26:16.398135 [info ] [MainThread]: 
+[0m18:26:16.398723 [info ] [MainThread]: Finished running 3 view models, 2 table models in 0 hours 0 minutes and 25.67 seconds (25.67s).
+[0m18:26:16.400623 [debug] [MainThread]: Command end result
+[0m18:26:16.560933 [info ] [MainThread]: 
+[0m18:26:16.561423 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:26:16.561775 [info ] [MainThread]: 
+[0m18:26:16.562221 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m18:26:16.565408 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 26.614313, "process_user_time": 1.983218, "process_kernel_time": 0.667857, "process_mem_max_rss": "118554624", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:26:16.565959 [debug] [MainThread]: Command `dbt build` succeeded at 18:26:16.565729 after 26.61 seconds
+[0m18:26:16.566390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100a36120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107052890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105400a70>]}
+[0m18:26:16.567233 [debug] [MainThread]: Flushing usage events

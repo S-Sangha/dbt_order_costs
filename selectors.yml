@@ -1,0 +1,31 @@
+selectors:
+  - name: all_orders_and_costs
+    description: "Run all models related to orders and costs"
+    definition:
+      union:
+        - tag: order_models
+        - tag: cost_models
+
+  - name: user_and_product_models
+    description: "Run all models related to users and products"
+    definition:
+      union:
+        - tag: user_models
+        - tag: product_models
+
+  - name: full_spend_analysis
+    description: "Run models for calculating the spend per user"
+    definition:
+      union:
+        - tag: spend_models
+        - tag: cost_models
+
+  - name: all_models
+    description: "Select and run all models"
+    definition:
+      union:
+        - tag: user_models
+        - tag: order_models
+        - tag: product_models
+        - tag: cost_models
+        - tag: spend_models

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: shannon_test
+    database: dev_etleap
+    schema: shannon_test
+    tables:
+      - name: users
+      - name: orders
+      - name: products
